@@ -1,6 +1,11 @@
 #include "pch.h"
+#include "../Project3/SimilarityChecker.cpp"
+#include <string>
 
-TEST(TestCaseName, TestName) {
-  EXPECT_EQ(1, 1);
-  EXPECT_TRUE(true);
+using namespace std;
+
+TEST(TestCaseName, LengthDifference_MoreThanDouble) {
+	SimilarityChecker checker;
+	int ret = checker.lengthCheck("AAA", "B");
+	EXPECT_EQ(0, 0);
 }
