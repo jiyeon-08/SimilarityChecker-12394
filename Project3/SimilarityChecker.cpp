@@ -12,5 +12,8 @@ public:
 			str2.length() > str1.length() * 2)) {
 			return 0;
 		}
+		if (str1.length() == str2.length()) {
+			return 60;
+		}
 	}
 };
