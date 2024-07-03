@@ -4,14 +4,17 @@
 
 using namespace std;
 
-TEST(TestCaseName, LengthDifference_MoreThanDouble) {
+class SimilarityCheckerFixture : public testing::Test {
+public:
 	SimilarityChecker checker;
+};
+
+TEST_F(SimilarityCheckerFixture, LengthDifference_MoreThanDouble) {
 	int ret = checker.lengthCheck("AAA", "B");
-	EXPECT_EQ(0, 0);
+	EXPECT_EQ(0, ret);
 }
 
-TEST(TestCaseName, SameLength) {
-	SimilarityChecker checker;
+TEST_F(SimilarityCheckerFixture, SameLength) {
 	int ret = checker.lengthCheck("AAA", "AAA");
 	EXPECT_EQ(60, ret);
 }
