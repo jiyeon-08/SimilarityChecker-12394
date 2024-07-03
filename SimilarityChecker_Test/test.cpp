@@ -18,3 +18,7 @@ TEST_F(SimilarityCheckerFixture, SameLength) {
 	int ret = checker.lengthCheck("AAA", "AAA");
 	EXPECT_EQ(60, ret);
 }
+TEST_F(SimilarityCheckerFixture, PartialScore) {
+	int ret = checker.lengthCheck("AAA", "AA");
+	EXPECT_EQ(30, ret);
+}
