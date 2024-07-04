@@ -5,7 +5,7 @@ using namespace std;
 
 class SimilarityChecker {
 public:
-	double lengthCheck(string str1, string str2) {
+	int lengthCheck(string str1, string str2) {
 		int length1 = str1.length();
 		int length2 = str2.length();
 
